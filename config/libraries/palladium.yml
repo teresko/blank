@@ -1,0 +1,41 @@
+parameters:
+    palladium.cookie_lifespan: !php/const Palladium\Service\Identification::DEFAULT_COOKIE_LIFESPAN
+    palladium.password_cost: 10
+
+
+services:
+
+    _defaults:
+        autowire: false
+        autoconfigure: true
+        public: false
+
+
+    Palladium\Component\MapperFactory:
+        arguments:
+            - '@pdo'
+            - '%tables.identities%'
+
+
+    Palladium\Service\Identification:
+        arguments:
+            - '@Palladium\Component\MapperFactory'
+            - '@logger.authentication'
+            - '%palladium.cookie_lifespan%'
+            - '%palladium.password_cost%'
+
+    Palladium\Service\Recovery:
+        arguments:
+            - '@Palladium\Component\MapperFactory'
+            - '@logger.authentication'
+
+    Palladium\Service\Registration:
+        arguments:
+            - '@Palladium\Component\MapperFactory'
+            - '@logger.authentication'
+            - '%palladium.password_cost%'
+
+    Palladium\Service\Search:
+        arguments:
+            - '@Palladium\Component\MapperFactory'
+            - '@logger.authentication'

@@ -1,0 +1,22 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    Application\View\:
+        resource: '../../../src/Application/View/*'
+
+
+    view.landing:
+        alias: 'Application\View\Landing'
+
+    view.login:
+        alias: 'Application\View\Login'
+
+    view.logout:
+        alias: 'Application\View\Logout'
+
+    view.register:
+        alias: 'Application\View\Register'

@@ -1,0 +1,22 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    Application\Controller\:
+        resource: '../../../src/Application/Controller/*'
+
+
+    controller.landing:
+        alias: 'Application\Controller\Landing'
+
+    controller.login:
+        alias: 'Application\Controller\Login'
+
+    controller.logout:
+        alias: 'Application\Controller\Logout'
+
+    controller.register:
+        alias: 'Application\Controller\Register'

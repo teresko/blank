@@ -1,0 +1,23 @@
+services:
+
+    Symfony\Component\HttpFoundation\Session\Session:
+        calls:
+            - ['start']
+
+    Component\MapperFactory:
+        arguments:
+            - '@pdo'
+            - '%tables%'
+
+    Twig\Loader\FilesystemLoader:
+        arguments:
+            - '%path.root%/Application/Template'
+
+    Twig\Environment:
+        arguments:
+            - '@Twig\Loader\FilesystemLoader'
+
+    Component\View:
+        abstract: true
+        calls:
+            - [setTemplatingEngine, ['@Twig\Environment']]

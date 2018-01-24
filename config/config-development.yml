@@ -1,0 +1,4 @@
+imports:
+    - { resource: parameters/development/database.php }
+    - { resource: dependencies/development/database.yml }
+    - { resource: dependencies/main.yml }

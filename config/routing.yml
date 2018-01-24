@@ -1,0 +1,51 @@
+# home
+root:
+    path: /
+    defaults:
+        resource: landing
+        action: default
+    methods: [GET, POST]
+
+
+auth:
+    path: /{resource}{slash}
+    defaults:
+        action: default
+    requirements:
+        resource: "login|logout|register"
+        slash: "[/]{0,1}"
+    methods: [GET, POST]
+
+
+# dynamic rules
+listing:
+    path: /{resource}{slash}
+    defaults:
+        action: collection
+    requirements:
+        id: "[1-9][0-9]*"
+        slash: "[/]{0,1}"
+    methods: [GET, POST]
+
+item:
+    path: /{resource}/{id}{slash}
+    defaults:
+        action: resource
+    requirements:
+        id: "[1-9][0-9]*"
+        slash: "[/]{0,1}"
+    methods: [GET, PUT, DELETE]
+
+item-action:
+    path: /{resource}/{id}/{action}{slash}
+    requirements:
+        id: "[1-9][0-9]*"
+        slash: "[/]{0,1}"
+    methods: [GET, POST]
+
+section-action:
+    path: /{resource}/{action}{slash}
+    requirements:
+        action: "[a-zA-Z-_]+"
+        slash: "[/]{0,1}"
+    methods: [GET, POST]

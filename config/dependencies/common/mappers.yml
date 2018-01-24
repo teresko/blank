@@ -1,0 +1,17 @@
+
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+
+    Model\Mapper\Account:
+        factory: Component\MapperFactory:create
+        arguments:
+            - 'Model\Mapper\Account'
+
+    Model\Mapper\Session:
+        arguments:
+            - '@Symfony\Component\HttpFoundation\Session\Session'

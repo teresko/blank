@@ -1,0 +1,18 @@
+imports:
+    - { resource: parameters/common/tables.yml }
+    - { resource: libraries/palladium.yml }
+    - { resource: common/loggers.yml }
+    - { resource: common/components.yml }
+    - { resource: common/authentication.yml }
+    - { resource: common/mappers.yml }
+    - { resource: common/controllers.yml }
+    - { resource: common/views.yml }
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Model\Service\:
+        resource: '../../src/Model/Service/*'

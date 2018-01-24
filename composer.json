@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+        "name": "Mārtiņš Tereško",
+        "email": "martins.teresko@gmail.com",
+        "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": ">=7.0",
+        "ext-pdo": "*",
+        "symfony/http-foundation": "^4.0",
+        "symfony/dependency-injection": "^4.0",
+        "symfony/config": "^4.0",
+        "symfony/yaml": "^4.0",
+        "symfony/routing": "^4.0",
+        "teresko/palladium": "^1.4",
+        "twig/twig": "*"
+    },
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "require-dev": {
+        "ext-pdo_sqlite": "*"
+    }
+}

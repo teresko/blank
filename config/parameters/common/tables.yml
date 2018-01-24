@@ -1,0 +1,9 @@
+parameters:
+
+    #workaround for stupid DIC behavior
+    tables.identities:          '`Identities`'
+
+    tables:
+        accounts:
+            primary:            '`Accounts`'
+        identities:             '`Identities`'
