@@ -22,7 +22,6 @@ class Register
     }
 
 
-
     public function getDefault()
     {
         $template = $this->engine->load('register.html.twig');
@@ -35,6 +34,4 @@ class Register
     {
         return new RedirectResponse('/');
     }
-
-
 }

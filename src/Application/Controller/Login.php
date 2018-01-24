@@ -10,10 +10,9 @@ use Model\Service\SignUp;
 
 class Login
 {
-
-
     private $identification;
     private $search;
+    private $signup;
 
 
     public function __construct(Identification $identification, Search $search, SignUp $signup)
@@ -24,9 +23,9 @@ class Login
     }
 
 
-    public function getDefault(Request $request)
+    public function getDefault()
     {
-
+        
     }
 
 

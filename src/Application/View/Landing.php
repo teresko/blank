@@ -2,7 +2,6 @@
 
 namespace Application\View;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Palladium\Service\Search;
 use Model\Service\SignUp;

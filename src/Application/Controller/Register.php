@@ -10,7 +10,6 @@ use Model\Service\SignUp;
 
 class Register
 {
-
     private $registration;
     private $signup;
 
@@ -22,7 +21,10 @@ class Register
     }
 
 
-    public function getDefault(Request $request){}
+    public function getDefault()
+    {
+
+    }
 
 
     public function postDefault(Request $request)

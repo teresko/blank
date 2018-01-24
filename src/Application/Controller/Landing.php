@@ -8,6 +8,7 @@ class Landing
 {
     private $account;
 
+
     public function __construct(Account $account)
     {
         $this->account = $account;

@@ -17,7 +17,6 @@ class Login
     }
 
 
-
     public function getDefault()
     {
         $template = $this->engine->load('login.html.twig');

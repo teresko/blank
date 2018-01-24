@@ -12,6 +12,7 @@ services:
         arguments:
             - 'Model\Mapper\Account'
 
+
     Model\Mapper\Session:
         arguments:
             - '@Symfony\Component\HttpFoundation\Session\Session'
